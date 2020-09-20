@@ -16,19 +16,16 @@ conn = engine.connect()
 Base = automap_base()
 Base.prepare(engine, reflect=True)
 
-# Base.metadata.tables # Check tables, not much useful
-# Base.classes.keys() # Get the table names
 
 Measurement = Base.classes.measurement
 Station = Base.classes.station
 
-#################################################
+
 # Flask Setup
 #################################################
 app = Flask(__name__)
 
 
-#################################################
 # Flask Routes
 #################################################
 
